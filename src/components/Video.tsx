@@ -47,10 +47,16 @@ export function Video({ videoSlug }: VideoProps): JSX.Element {
   })
 
 
+
   if (!data) {
     return (
-      <div className="flex-1">
-        <h1>Carregando</h1>
+      <div className="flex-1 flex items-center justify-center">
+        <img
+          src="/src/assets/circle-notch.svg"
+          alt="circle img"
+          className="md:h-14  animate-spin "
+
+        />
       </div>)
   }
   return (
@@ -58,7 +64,7 @@ export function Video({ videoSlug }: VideoProps): JSX.Element {
       <div className="bg-black flex justify-center">
         <div className="h-full w-full max-w-[1500px] max-h-[60vh] aspect-video" >
           <Player>
-            <Youtube videoId={data.lesson.videoId} />
+            <Youtube videoId={data.lesson.videoId} key={data.lesson.videoId} />
             <DefaultUi />
           </Player>
         </div>
