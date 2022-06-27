@@ -1,6 +1,7 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
 import { CaretRight, FileArrowDown } from "phosphor-react";
 import { NavButton } from '../components/buttons/NavButton'
+import circleImg from '../assets/circle-notch.svg'
 
 
 import '@vime/core/themes/default.css';
@@ -25,7 +26,7 @@ export function Video({ videoSlug }: VideoProps): JSX.Element {
     return (
       <div className="flex-1 flex items-center justify-center">
         <img
-          src="/src/assets/circle-notch.svg"
+          src={circleImg}
           alt="circle img"
           className="md:h-14  animate-spin "
 
