@@ -10,7 +10,7 @@ type SideBarProps = {
 export function SideBar({ isOpen }: SideBarProps): JSX.Element {
   const { data } = useGetLessonsQuery();
   return (
-    <aside className={classNames("w-[348px] bg-gray-700 p-6 border-l border-gray-700 absolute md:block md:static", {
+    <aside className={classNames("w-[348px] bg-gray-700 p-6 border-l border-gray-700 absolute md:block md:static transition-all", {
       "right-0 z-[999]": isOpen,
       "hidden": !isOpen
 
