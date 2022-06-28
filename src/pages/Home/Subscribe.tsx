@@ -33,14 +33,14 @@ export function Subscribe(): JSX.Element {
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto md:mt-10">
-        <div className="max-w-[640px]">
+      <div className="md:w-full md:max-w-[1100px] md:flex md:items-center md:justify-between md:mt-10 md:mx-auto">
+        <div className="mt-[40px] md:mt-0 flex flex-col items-center md:items-start md:max-w-[640px]">
           <Icon />
-          <h1 className="mt-8 text-[2.5rem] leading-tight">Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React</strong></h1>
-          <p className="leading-relaxed mt-4 text-gray-200">Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.</p>
+          <h1 className="text-center text-4xl mt-8 md:text-left md:text-[2.5rem] leading-tight">Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React</strong></h1>
+          <p className="text-center md:text-left leading-relaxed mt-4 text-gray-200">Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.</p>
         </div>
-        <div className="p-8 bg-gray-700 border border-gray-500 rounded" >
-          <strong className="text-2xl mb-6 block" >Inscreva-se gratuitamente</strong>
+        <div className="mt-8 md:mt-0 p-8 bg-gray-700 border border-gray-500 rounded" >
+          <strong className="md:text-2xl mb-6 block" >Inscreva-se gratuitamente</strong>
           <form action="" className="flex flex-col gap-2 w-full" onSubmit={handleSubscription}>
             <input
               type="text"
