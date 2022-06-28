@@ -1,10 +1,20 @@
 import { useGetLessonsQuery } from "../graphql/generated";
 import { Lesson } from "./Lesson";
+import classNames from "classnames";
 
-export function SideBar(): JSX.Element {
+type SideBarProps = {
+  isOpen: boolean;
+}
+
+
+export function SideBar({ isOpen }: SideBarProps): JSX.Element {
   const { data } = useGetLessonsQuery();
   return (
-    <aside className="w-[348px] bg-gray-700 p-6 border-l border-gray-700">
+    <aside className={classNames("w-[348px] bg-gray-700 p-6 border-l border-gray-700 absolute md:block md:static", {
+      "right-0 z-[999]": isOpen,
+      "hidden": !isOpen
+
+    })}>
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
         Cronograma de aulas
       </span>
